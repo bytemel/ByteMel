@@ -1,8 +1,4 @@
-## Hey, Timothy Mwangi here 👋
-
-<p>
-<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px"/>
-</p>
+## Hey, Timothy Mwangi here 👋  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px"/>
 
 <h3>Building serious software. Solving hard problems. Playing the long game.</h3>
 
