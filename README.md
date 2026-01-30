@@ -18,14 +18,7 @@
 I design and build scalable, real world software with a strong focus on **performance, reliability, and problem solving**.  
 I enjoy working at the intersection of **mobile, data, and intelligent systems**, where impact actually matters.
 
-I care about:
-- Clean architecture over quick hacks  
-- Systems that scale and survive production  
-- Learning fast and executing faster  
-
 ---
-
-### 🧠 How I Think
 
 > There are 10 types of people in the world. Those who understand binary and those who don’t.
 
