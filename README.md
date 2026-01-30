@@ -1,56 +1,59 @@
-## Hey, [Timothy Mwangi Here!]([https://www.linkedin.com/in/timothy-mwangi/])  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px">
+## Hey, Timothy Mwangi here 👋
 
-<h1>Welcome to my humble abode in the Digital World..</h1> 
+<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px"/>
 
-<img src = 'https://github.com/bytemel/readme/blob/main/matrix.gif' alt = 'Awesome Matrix Code' align='right'/>
+<h3>Building serious software. Solving hard problems. Playing the long game.</h3>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Timothy_Mwangi-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/timothy-mwangi/)](https://www.linkedin.com/in/timothy-mwangi/) [![Gmail Badge](https://img.shields.io/badge/-t.mwangim02@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:t.mwangim02@gmail.com)](mailto:t.mwangim02@gmail.com) 
-<p align="left"> <img src="https://camo.githubusercontent.com/1fe8bfaac1774657e8d8ab582fd71f0c7ef0e239a230d65d9acb68059d5fe9d4/68747470733a2f2f6b6f6d617265762e636f6d2f67687076632f3f757365726e616d653d4d6172696b497368746172303037" alt="Timothy-Mwangi Profile Views" /> </p>
-<div style="text-align: right">There are 10 types of people in the world. Those who get Binary and those who don't.. </div>
+<img src="https://github.com/bytemel/readme/blob/main/matrix.gif" align="right" width="320"/>
 
-## :computer: Technologies I Love
-* Flutter
-* Machine Learning
-* Data Analysis
-* Frontend and Backend Web Development
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Timothy_Mwangi-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/timothy-mwangi/)
+[![Email](https://img.shields.io/badge/Email-t.mwangim02@gmail.com-red?style=flat-square&logo=gmail)](mailto:t.mwangim02@gmail.com)
 
+<p>
+<img src="https://komarev.com/ghpvc/?username=tim-mwangi&label=Profile%20Views&color=0e75b6&style=flat"/>
+</p>
 
-## Programming Languages
-<img src = 'https://github.com/bytemel/Tim_readme/blob/main/c-original.svg' width='30'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/python2.png' height='30'/>  <img src = 'https://github.com/bytemel/Tim_readme/blob/main/html.svg' width='30'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/css.svg' width='30'/> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/js.svg' width='30'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/bootstrap.svg' width='33'/>
- 
- ## Technologies I Use
- <img src = 'https://github.com/bytemel/Tim_readme/blob/main/pycharm.svg' width='30'/>  <img src = 'https://github.com/bytemel/Tim_readme/blob/main/django.svg' height='40'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/git.svg' width='30'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/nodejs.svg' width='33'/> <img src = 'https://github.com/bytemel/Tim_readme/blob/main/react.svg' width='33'/>
- 
- ## Who am I?
- ```python
- class WhoAmI:
- 	user = 'Timothy Mwangi'
-		current_work = 'Writing code'
-		hobbies = [
-				'Riding a bike',
-				'Playing Chess',
-				'Reading Sci-Fi Novels'
-				'Being up all Night chasing that ONE BUG...'
-			]
-	
-	def getCity():
-		return Nairobi_Kenya()
-	
-	def Ambitions():
-		LearnChinese()
-		CreateTherapy_App()
-		FinishMyNovel()
-		Data Science()
-		# Assume 10 more awesome ambitions here  ;)
-	
- ```
+---
 
-[![streak](https://codeium.com/badges/v2/user/tim-mwangi/streak)](https://codeium.com/profile/tim-mwangi)
- 
-## Current Works
- * Breaking into AI !!
- * I'm currently working on 🔭 building **Mobile Apps using Flutter** and working up on polishing my skills 🌱 in **Competitive Programming**.
- 
+### 🚀 What I Do
 
- 
- 
+I design and build scalable, real world software with a strong focus on **performance, reliability, and problem solving**.  
+I enjoy working at the intersection of **mobile, data, and intelligent systems**, where impact actually matters.
+
+I care about:
+- Clean architecture over quick hacks  
+- Systems that scale and survive production  
+- Learning fast and executing faster  
+
+---
+
+### 🧠 How I Think
+
+> There are 10 types of people in the world. Those who understand binary and those who don’t.
+
+I approach problems analytically, break complexity into systems, and obsess over edge cases.  
+Competitive environments motivate me. Hard problems keep me sharp.
+
+---
+
+### 🔭 Current Focus
+
+- Breaking deep into **AI and applied machine learning**
+- Building production ready **mobile applications**
+- Leveling up in **competitive programming and algorithms**
+- Shipping projects that solve real user problems
+
+---
+
+### 📌 Highlights
+
+- Strong engineering fundamentals  
+- End to end project ownership  
+- Comfortable working solo or in fast moving teams  
+- Always learning. Always building.
+
+---
+
+### 🤝 Let’s Connect
+
+If you are building something ambitious, challenging, or technically demanding, I am always open to a conversation.
