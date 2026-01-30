@@ -1,4 +1,4 @@
-## Hey, Timothy Mwangi here 👋
+7## Hey, Timothy Mwangi here 👋
 
 <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px"/>
 
@@ -38,19 +38,9 @@ Competitive environments motivate me. Hard problems keep me sharp.
 
 ### 🔭 Current Focus
 
-- Breaking deep into **AI and applied machine learning**
-- Building production ready **mobile applications**
+- Breaking deep into **Data Science**
 - Leveling up in **competitive programming and algorithms**
 - Shipping projects that solve real user problems
-
----
-
-### 📌 Highlights
-
-- Strong engineering fundamentals  
-- End to end project ownership  
-- Comfortable working solo or in fast moving teams  
-- Always learning. Always building.
 
 ---
 
