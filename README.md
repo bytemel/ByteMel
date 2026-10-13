@@ -72,7 +72,7 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 
 <p align="center">
   <a href="https://bytemel.github.io/ByteMel/"><img src="https://img.shields.io/badge/%E2%96%B6%20BEAT%20THE%20BOT-insert%20coin-00ff41?style=for-the-badge&labelColor=000000" alt="Beat the bot"/></a><br/>
-  <sub>The bot above just ate my whole year without dying. Nobody has matched it yet.</sub>
+  <sub>The bot above just ate my whole year without dying. Think you can match it?</sub>
 </p>
 
 ### `> ./pulse --live`
