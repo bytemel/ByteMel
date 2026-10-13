@@ -74,6 +74,25 @@ Most of my code lives in client repos, so the graph below tells more of the stor
   </picture>
 </p>
 
+### `> ./pulse --live`
+
+<!--PULSE:START-->
+```text
+contributions, last year .. 1,088
+this week ................. 26
+current streak ............ 2 days 🌱
+longest streak ............ 18 days
+best day .................. 157 on 2026-09-27
+last public push .......... inside a client repo 🤫
+
+100-day streak challenge
+[░░░░░░░░░░░░░░░░░░░░] 2/100
+
+today's side quest: Make one page load faster
+```
+<sub>A bot rewrites this every 6 hours. Last run: 13 Oct 2026, 10:15 EAT.</sub>
+<!--PULSE:END-->
+
 ### `> cat ./off-the-keyboard`
 
 - 🎓 Alumni Relations Lead at **AfricaHackon**, social media lead at **Hackhouse Africa**
@@ -85,8 +104,17 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 ### `> ./now`
 
 - [x] Ship client systems that run without me in the room
-- [ ] Get Tafsiri onto the Chrome Web Store
+- [ ] Get Tafsiri onto the Chrome Web Store (reviewers, be gentle)
 - [ ] Write more about building for African programmes and communities
+
+### `> ./side-quests --hard-mode`
+
+- [ ] Push code 100 days in a row (the bot below is keeping score, no cheating)
+- [ ] Ship one small, slightly ridiculous project a month, just for fun
+- [ ] Build something in a language I have never touched
+- [ ] Get a stranger to star a repo of mine
+- [ ] Learn psychology properly, then build something with it
+- [ ] Touch grass at least once a week. Verified by photo.
 
 <p align="center">
   <b>Running a programme, a community or a startup that needs something to work properly?</b><br/>
