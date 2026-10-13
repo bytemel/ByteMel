@@ -1,64 +1,96 @@
-## Hi, I'm Tim (Timothy Mwangi)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003b00,100:00ff41&height=180&section=header&text=Timothy%20Mwangi&fontColor=ffffff&fontSize=52&fontAlignY=36&desc=Nairobi%20%E2%80%A2%20builder%20of%20systems%20that%20keep%20running&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
-**I make programmes and communities run, and I build the tools they need.**
+<p align="center">
+  <a href="https://timmwangi.com">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00FF41&center=true&vCenter=true&width=640&lines=I+make+programmes+and+communities+run.;And+I+build+the+tools+they+need.;Next.js+%2B+Supabase+%2B+Vercel%2C+shipped+solo.;Paystack%2C+M-Pesa%2C+SMS%2C+email%3A+wired+for+Kenya.;Currently+shipping%3A+Tafsiri+for+Chrome." alt="Typing intro"/>
+  </a>
+</p>
 
-Nairobi, Kenya. Trained as a software engineer at ALX, came up through operations, and now build production web systems for African startups, foundations and programmes, mostly end to end and mostly solo.
+<p align="center">
+  <a href="https://timmwangi.com"><img src="https://img.shields.io/badge/timmwangi.com-000?style=for-the-badge&logo=vercel&logoColor=00ff41"/></a>
+  <a href="https://www.linkedin.com/in/timothy-mwangi/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://x.com/Timothy_Mwangim"><img src="https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white"/></a>
+  <a href="mailto:timmwangim@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://calendly.com/timmwangi/"><img src="https://img.shields.io/badge/Book_a_call-006BFF?style=for-the-badge&logo=calendly&logoColor=white"/></a>
+</p>
 
-[![Website](https://img.shields.io/badge/timmwangi.com-000?style=flat-square&logo=vercel&logoColor=white)](https://timmwangi.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Timothy_Mwangi-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/timothy-mwangi/)
-[![X](https://img.shields.io/badge/X-@Timothy__Mwangim-000?style=flat-square&logo=x&logoColor=white)](https://x.com/Timothy_Mwangim)
-[![Email](https://img.shields.io/badge/Email-timmwangim@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:timmwangim@gmail.com)
-[![Book a call](https://img.shields.io/badge/Book_a_call-Calendly-006BFF?style=flat-square&logo=calendly&logoColor=white)](https://calendly.com/timmwangi/)
-
----
-
-### What I've shipped in 2026
-
-Most of this lives in client repos, so you won't see it in my contribution graph.
-
-| Project | What it is | My part |
-|---|---|---|
-| [AfriESG Metrics](https://afriesg.africa) | ESG platform for African companies: public site and CMS, a multi-tenant product app, and a data collection tool | Sole developer and product lead |
-| [Epic Prime Investments](https://epicprime.co.ke) | Land sales site, customer portal and back office CRM | Sole developer |
-| [Nawiri Sisters Foundation](https://nawirisisters.org) | Donations, events, ticketing and a CMS for a foundation | Sole developer |
-| [Canvathon Kenya](https://canvathon-kenya.vercel.app) | Design competition platform: briefs, submissions, judging and results | Built it |
-| [Arkaiv](https://arkaivafrica.com) | Governance SaaS | V1 iteration |
-| [magotheinnocent.com](https://magotheinnocent.com) | Founder portfolio with its own CMS | Built it |
-| [Docent](https://docent-drab.vercel.app) | Animated A to B route links with live tracking | My own product |
-| Tafsiri | Free Chrome extension that translates live meeting captions (Meet, Teams, Zoom web) on device | My own product |
-| [timmwangi.com](https://timmwangi.com) | My site and blog, on a Supabase CMS I built | My own product |
-
-### How I build
-
-![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
-![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
-
-- **Payments and messaging for Kenya:** Paystack, M-Pesa, Africa's Talking SMS, Resend email.
-- **AI-assisted, human-owned:** I build with Claude Code and my own plugin set. I read every diff and own what ships.
-- **Built to be handed over:** admin panels so clients edit their own content, plus docs so the system outlasts my time on it.
-
-### Beyond the code
-
-- Alumni Relations Lead at **AfricaHackon** and social media lead at **Hackhouse Africa**.
-- Product Manager at **Teckid**, an online coding school for kids.
-- Supported 2,000+ learners at **ALX** and walked a cohort of 160+ to graduation.
-- Main contact for 70+ founders in **Startup Garage Africa** cohort 1.
-- Canva Canvassador.
-
-### Current focus
-
-- Shipping client systems that run without me in the room
-- Getting Tafsiri onto the Chrome Web Store
-- Writing more about building for African programmes and communities
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=tim-mwangi&label=profile%20views&color=00c853&style=flat-square" alt="Profile views"/>
+</p>
 
 ---
 
-If you run a programme, a community or a startup and something needs to work properly, [book a call](https://calendly.com/timmwangi/) or email me.
+<img src="https://raw.githubusercontent.com/bytemel/readme/main/matrix.gif" align="right" width="300" alt="Matrix rain"/>
+
+### `> whoami`
+
+```js
+const tim = {
+  base:       "Nairobi, Kenya",
+  trainedAt:  "ALX Software Engineering",
+  does:       ["product engineering", "programmes", "community"],
+  ships:      "production systems, end to end, mostly solo",
+  buildsWith: ["Next.js", "Supabase", "Vercel", "Claude Code"],
+  wiredFor:   ["Paystack", "M-Pesa", "Africa's Talking", "Resend"],
+  rule:       "build it so it runs after I leave",
+};
+```
+
+Most of my code lives in client repos, so the graph below tells more of the story than my public repos do.
+
+<br clear="right"/>
+
+### `> ls ./shipped --2026`
+
+| | Project | What it is | My part |
+|---|---|---|---|
+| 🌍 | [AfriESG Metrics](https://afriesg.africa) | ESG platform: public site and CMS, multi-tenant product app, data collection tool | Sole developer, product lead |
+| 🏡 | [Epic Prime Investments](https://epicprime.co.ke) | Land sales site, customer portal, back office CRM | Sole developer |
+| 💜 | [Nawiri Sisters Foundation](https://nawirisisters.org) | Donations, events, ticketing, CMS | Sole developer |
+| 🎨 | [Canvathon Kenya](https://canvathon-kenya.vercel.app) | Design competition: briefs, submissions, judging, results | Built it |
+| 🏛️ | [Arkaiv](https://arkaivafrica.com) | Governance SaaS | V1 iteration |
+| ✍️ | [magotheinnocent.com](https://magotheinnocent.com) | Founder portfolio with its own CMS | Built it |
+| 🗺️ | [Docent](https://docent-drab.vercel.app) | Animated A to B route links with live tracking | Mine |
+| 🗣️ | Tafsiri | Chrome extension: live meeting captions translated on device (Meet, Teams, Zoom web) | Mine, Web Store soon |
+| ⚡ | [timmwangi.com](https://timmwangi.com) | My site and blog on a Supabase CMS I built | Mine |
+
+### `> cat ./stack`
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15" alt="Stack"/>
+</p>
+
+### `> ./activity`
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=bytemel&theme=dark&background=0D1117&border=00ff41&ring=00ff41&fire=00ff41&currStreakNum=00ff41&sideNums=ffffff&currStreakLabel=00ff41&sideLabels=c9d1d9&dates=8b949e&hide_border=false" alt="Contribution streak"/>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake.svg"/>
+    <img src="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake-dark.svg" alt="Snake eating my contribution graph"/>
+  </picture>
+</p>
+
+### `> cat ./off-the-keyboard`
+
+- 🎓 Alumni Relations Lead at **AfricaHackon**, social media lead at **Hackhouse Africa**
+- 🧒 Product Manager at **Teckid**, an online coding school for kids
+- 📚 Supported 2,000+ learners at **ALX** and walked a cohort of 160+ to graduation
+- 🚀 Main contact for 70+ founders in **Startup Garage Africa** cohort 1
+- 🖌️ Canva Canvassador
+
+### `> ./now`
+
+- [x] Ship client systems that run without me in the room
+- [ ] Get Tafsiri onto the Chrome Web Store
+- [ ] Write more about building for African programmes and communities
+
+<p align="center">
+  <b>Running a programme, a community or a startup that needs something to work properly?</b><br/>
+  <a href="https://calendly.com/timmwangi/">Book a call</a> or <a href="mailto:timmwangim@gmail.com">email me</a>.
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,50:003b00,100:000000&height=110&section=footer" width="100%"/>
