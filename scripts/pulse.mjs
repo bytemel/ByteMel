@@ -1,6 +1,7 @@
 // Rewrites the PULSE block in README.md with live GitHub numbers.
 // Runs from .github/workflows/pulse.yml. Node 20+, no dependencies.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { renderSnakeGame } from "./snake-game.mjs";
 
 const USER = process.env.GH_USER || "bytemel";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -87,7 +88,7 @@ const { user } = await gql(
         restrictedContributionsCount
         contributionCalendar {
           totalContributions
-          weeks { contributionDays { date contributionCount } }
+          weeks { contributionDays { date contributionCount weekday } }
         }
       }
     }
@@ -135,8 +136,8 @@ if (!pattern.test(readme)) throw new Error("PULSE markers missing from README.md
 await writeFile(README, readme.replace(pattern, block));
 console.log(block);
 
-// The snake game on GitHub Pages plays on this grid.
-const DOCS = new URL("../docs/", import.meta.url);
-await mkdir(DOCS, { recursive: true });
-const grid = cal.weeks.map((w) => w.contributionDays.map((d) => [d.date, d.contributionCount]));
-await writeFile(new URL("contributions.json", DOCS), JSON.stringify({ user: USER, total: cal.totalContributions, weeks: grid }));
+// The self-playing snake under ./activity.
+const ASSETS = new URL("../assets/", import.meta.url);
+await mkdir(ASSETS, { recursive: true });
+const weeksForGame = cal.weeks.map((w) => w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, weekday: d.weekday })));
+await writeFile(new URL("snake-game.svg", ASSETS), renderSnakeGame(weeksForGame, { user: USER, total: cal.totalContributions }));
