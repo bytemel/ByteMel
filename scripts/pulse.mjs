@@ -136,8 +136,17 @@ if (!pattern.test(readme)) throw new Error("PULSE markers missing from README.md
 await writeFile(README, readme.replace(pattern, block));
 console.log(block);
 
-// The self-playing snake under ./activity.
+// The self-playing snake under ./activity, and the board for the playable game it links to.
 const ASSETS = new URL("../assets/", import.meta.url);
+const DOCS = new URL("../docs/", import.meta.url);
 await mkdir(ASSETS, { recursive: true });
+await mkdir(DOCS, { recursive: true });
 const weeksForGame = cal.weeks.map((w) => w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, weekday: d.weekday })));
-await writeFile(new URL("snake-game.svg", ASSETS), renderSnakeGame(weeksForGame, { user: USER, total: cal.totalContributions }));
+const demo = renderSnakeGame(weeksForGame, { user: USER, total: cal.totalContributions });
+await writeFile(new URL("snake-game.svg", ASSETS), demo.svg);
+await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
+  user: USER,
+  total: cal.totalContributions,
+  bot: { score: demo.score, outcome: demo.outcome },
+  weeks: weeksForGame.map((days) => days.map((d) => [d.date, d.count, d.weekday])),
+}));

@@ -67,7 +67,12 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 </p>
 
 <p align="center">
-  <img src="assets/snake-game.svg" width="100%" alt="A bot playing Snake on my contribution graph: it eats every green day, grows, keeps score, then starts over"/>
+  <a href="https://bytemel.github.io/ByteMel/"><img src="assets/snake-game.svg" width="100%" alt="Demo: a bot plays Snake on my contribution graph and eats every green day. Click to play."/></a>
+</p>
+
+<p align="center">
+  <a href="https://bytemel.github.io/ByteMel/"><img src="https://img.shields.io/badge/%E2%96%B6%20BEAT%20THE%20BOT-insert%20coin-00ff41?style=for-the-badge&labelColor=000000" alt="Beat the bot"/></a><br/>
+  <sub>The bot above just ate my whole year without dying. Nobody has matched it yet.</sub>
 </p>
 
 ### `> ./pulse --live`
@@ -76,13 +81,13 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 ```text
 contributions, last year .. 1,096
 this week ................. 34
-current streak ............ 4 days 🌱
+current streak ............ 2 days 🌱
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
 last public push .......... inside a client repo 🤫
 
 100-day streak challenge
-[█░░░░░░░░░░░░░░░░░░░] 4/100
+[░░░░░░░░░░░░░░░░░░░░] 2/100
 
 today's side quest: Make one page load faster
 ```

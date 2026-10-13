@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beat the Bot</title>
+<meta name="description" content="A bot ate a whole year of Timothy Mwangi's GitHub contributions in Snake. Your turn.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #010409;
+    --line: #21262d;
+    --frame: #1f6f2f;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --neon: #00ff41;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: "Courier New", Courier, ui-monospace, monospace;
+    font-weight: 700;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 40px;
+  }
+  main { width: 100%; max-width: 980px; }
+  .prompt { color: var(--muted); margin: 0 0 4px; font-size: 14px; }
+  .prompt b { color: var(--neon); }
+  h1 { margin: 0 0 16px; font-size: clamp(24px, 4.4vw, 36px); color: #fff; letter-spacing: .04em; }
+  h1 span { color: var(--neon); }
+  .neon { color: var(--neon); }
+  .blink { animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .blink { animation: none; } }
+  .cabinet {
+    background: var(--panel);
+    border: 2px solid var(--frame);
+    border-radius: 10px;
+    padding: 14px 14px 12px;
+  }
+  .hud, .foot {
+    display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap;
+    font-size: 15px; font-variant-numeric: tabular-nums;
+  }
+  .hud { margin-bottom: 12px; }
+  .hud small, .foot { color: var(--muted); font-size: 12px; }
+  .hud b { color: #fff; margin-left: 6px; }
+  .hud .grow, .foot .grow { flex: 1; }
+  .foot { margin-top: 12px; }
+  .foot b { color: var(--text); }
+  .board { position: relative; padding: 0; }
+  canvas { display: block; margin: 0 auto; touch-action: none; }
+  .overlay {
+    position: absolute; inset: -4px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; text-align: center; padding: 16px;
+    background: rgba(1, 4, 9, .84);
+    border-radius: 6px;
+  }
+  .overlay[hidden] { display: none; }
+  .overlay h2 { margin: 0; font-size: clamp(20px, 3.6vw, 28px); color: var(--neon); letter-spacing: .04em; }
+  .overlay p { margin: 0; color: var(--muted); font-size: 13px; max-width: 52ch; line-height: 1.5; text-transform: uppercase; }
+  .overlay p b { color: #fff; }
+  button {
+    font: inherit; cursor: pointer;
+    background: var(--neon); color: #000; border: 0; border-radius: 4px;
+    padding: 10px 20px; font-size: 15px; letter-spacing: .06em;
+  }
+  button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .log { margin: 12px 0 0; color: var(--muted); font-size: 13px; min-height: 1.5em; }
+  .log b { color: var(--neon); font-weight: 600; }
+  .pad { display: none; margin: 16px auto 0; width: 180px; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .pad button { background: var(--panel); color: var(--neon); border: 1px solid var(--line); padding: 14px 0; font-size: 18px; }
+  .pad .up { grid-column: 2; }
+  .pad .left { grid-column: 1; grid-row: 2; }
+  .pad .down { grid-column: 2; grid-row: 2; }
+  .pad .right { grid-column: 3; grid-row: 2; }
+  @media (pointer: coarse) { .pad { display: grid; } }
+  .keys { color: var(--muted); font-size: 12px; margin-top: 14px; }
+  kbd { border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; color: var(--text); }
+  footer { margin-top: 28px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--neon); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 560px) {
+    body { padding-top: 16px; }
+    h1 { margin-bottom: 12px; }
+    .cabinet { padding: 10px 8px; }
+    .hud { gap: 10px; font-size: 13px; }
+    .hud small, .foot { font-size: 10px; }
+    .pad { margin-top: 10px; }
+    .keys { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="prompt"><b>tim@nairobi</b>:~$ ./snake --beat-the-bot</p>
+  <h1>BEAT THE <span>BOT</span></h1>
+
+  <div class="cabinet">
+    <div class="hud" aria-live="polite">
+      <span class="neon blink">1UP</span>
+      <span><small>SCORE</small><b id="score">000000</b></span>
+      <span class="grow"></span>
+      <span><small>BOT</small><b id="bot">000000</b></span>
+      <span><small>YOUR BEST</small><b id="best">000000</b></span>
+    </div>
+
+    <div class="board">
+      <canvas id="game" aria-label="Snake game board built from a GitHub contribution graph"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="title">INSERT COIN</h2>
+        <p id="msg">Loading the board...</p>
+        <button id="start">PRESS START</button>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>PLAYER 2: YOU</span>
+      <span>LEN <b id="length">3</b></span>
+      <span>DAYS LEFT <b id="left">0</b></span>
+      <span class="grow"></span>
+      <span class="neon blink" id="coin">INSERT COIN</span>
+    </div>
+  </div>
+
+  <p class="log" id="log"></p>
+
+  <div class="pad" aria-label="Direction buttons">
+    <button class="up" data-dir="up" aria-label="Up">▲</button>
+    <button class="left" data-dir="left" aria-label="Left">◀</button>
+    <button class="down" data-dir="down" aria-label="Down">▼</button>
+    <button class="right" data-dir="right" aria-label="Right">▶</button>
+  </div>
+
+  <p class="keys"><kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> or <kbd>WASD</kbd> to steer, <kbd>Space</kbd> to pause. Swipe on a phone.</p>
+
+  <footer>Built by <a href="https://github.com/bytemel">@bytemel</a>. Board refreshes from GitHub every 6 hours. <a href="https://timmwangi.com">timmwangi.com</a></footer>
+</main>
+
+<script>
+(() => {
+  const COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
+  const DIRS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
+  const KEYS = {
+    ArrowUp: "up", KeyW: "up", ArrowDown: "down", KeyS: "down",
+    ArrowLeft: "left", KeyA: "left", ArrowRight: "right", KeyD: "right",
+  };
+  const DEATHS = [
+    "Merge conflict with a wall.",
+    "Snake hit a 500. Production is down.",
+    "Ate its own tail. Classic scope creep.",
+    "Crashed harder than a Friday deploy.",
+    "Segfault. The snake has left the chat.",
+  ];
+
+  const canvas = document.getElementById("game");
+  const ctx = canvas.getContext("2d");
+  const $ = (id) => document.getElementById(id);
+  const overlay = $("overlay");
+
+  let weeks = [];
+  let bot = { score: 0, outcome: "win" };
+  const n = (v) => v.toLocaleString("en-US");
+  const pad6 = (v) => String(v).padStart(6, "0");
+  let cols, rows, bands, cell, gap;
+  let food;      // Map "x,y" -> { date, count, level }
+  let snake, dir, queue, score, timer, speed, alive, paused, lastBite;
+
+  const store = {
+    get() { try { return Number(localStorage.getItem("snake-best")) || 0; } catch { return 0; } },
+    set(v) { try { localStorage.setItem("snake-best", String(v)); } catch {} },
+  };
+
+  function fakeYear() {
+    // Used only when contributions.json cannot load.
+    const out = [];
+    const start = new Date(Date.now() - 364 * 86400000);
+    for (let w = 0; w < 53; w++) {
+      const days = [];
+      for (let d = 0; d < 7; d++) {
+        const date = new Date(start.getTime() + (w * 7 + d) * 86400000).toISOString().slice(0, 10);
+        days.push([date, Math.random() < 0.55 ? Math.ceil(Math.random() ** 2 * 20) : 0]);
+      }
+      out.push(days);
+    }
+    return out;
+  }
+
+  function levels(counts) {
+    // Same idea as GitHub: four shades split by quartile of the non-zero days.
+    const sorted = counts.filter((c) => c > 0).sort((a, b) => a - b);
+    const q = (p) => sorted[Math.floor((sorted.length - 1) * p)] || 1;
+    const cuts = [q(0.25), q(0.5), q(0.75)];
+    return (c) => (c === 0 ? 0 : c <= cuts[0] ? 1 : c <= cuts[1] ? 2 : c <= cuts[2] ? 3 : 4);
+  }
+
+  function layout() {
+    // Fold the year into bands so the board fits the screen: 2 on desktop, 4 on a phone.
+    const board = canvas.parentElement;
+    const pad = parseFloat(getComputedStyle(board).paddingLeft) * 2;
+    const width = board.clientWidth - pad;
+    bands = width < 600 ? 4 : 2;
+    cols = Math.ceil(weeks.length / bands);
+    rows = bands * 7;
+    // Fit the width, but keep the whole board on screen on short laptops.
+    const tall = Math.max(rows * 10, window.innerHeight - (bands === 2 ? 300 : 330));
+    cell = Math.max(10, Math.floor(Math.min(width / cols, tall / rows)));
+    gap = Math.max(1, Math.round(cell * 0.14));
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = cols * cell * dpr;
+    canvas.height = rows * cell * dpr;
+    canvas.style.width = cols * cell + "px";
+    canvas.style.height = rows * cell + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function cellOf(w, d) {
+    const band = Math.floor(w / cols);
+    return [w % cols, band * 7 + d];
+  }
+
+  function reset() {
+    const level = levels(weeks.flat().map((d) => d[1]));
+    food = new Map();
+    weeks.forEach((days, w) => days.forEach(([date, count, weekday], i) => {
+        const d = weekday ?? i;
+      if (count > 0) {
+        const [x, y] = cellOf(w, d);
+        food.set(x + "," + y, { date, count, level: level(count) });
+      }
+    }));
+    const y = Math.floor(rows / 2);
+    snake = [[4, y], [3, y], [2, y]];
+    snake.forEach(([x, yy]) => food.delete(x + "," + yy));
+    dir = "right";
+    queue = [];
+    score = 0;
+    speed = 150;
+    alive = true;
+    paused = false;
+    lastBite = null;
+    $("log").textContent = "";
+    hud();
+    draw();
+  }
+
+  function hud() {
+    $("score").textContent = pad6(score);
+    $("length").textContent = snake.length;
+    $("left").textContent = food.size;
+    $("best").textContent = pad6(store.get());
+    $("bot").textContent = pad6(bot.score);
+  }
+
+  function roundRect(x, y, s, color, glow) {
+    ctx.fillStyle = color;
+    ctx.shadowColor = glow ? color : "transparent";
+    ctx.shadowBlur = glow ? 10 : 0;
+    const r = Math.max(1, s * 0.2);
+    ctx.beginPath();
+    ctx.roundRect(x, y, s, s, r);
+    ctx.fill();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, cols * cell, rows * cell);
+    const s = cell - gap;
+    for (let x = 0; x < cols; x++) {
+      for (let y = 0; y < rows; y++) {
+        const f = food.get(x + "," + y);
+        roundRect(x * cell, y * cell, s, COLORS[f ? f.level : 0], false);
+      }
+    }
+    // Faint line between the folded bands of the year.
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = "#30363d";
+    for (let b = 1; b < bands; b++) ctx.fillRect(0, b * 7 * cell - gap / 2 - 1, cols * cell - gap, 1);
+    // The snake is one joined body with a glow, so it never blends into the green squares.
+    ctx.shadowColor = "#00ff41";
+    ctx.shadowBlur = 12;
+    ctx.fillStyle = "#00ff41";
+    snake.forEach(([x, y], i) => {
+      ctx.beginPath();
+      ctx.roundRect(x * cell, y * cell, s, s, Math.max(1, s * 0.3));
+      ctx.fill();
+      const next = snake[i + 1];
+      if (next) {
+        const [nx, ny] = next;
+        ctx.fillRect(Math.min(x, nx) * cell + (x === nx ? 0 : s / 2), Math.min(y, ny) * cell + (y === ny ? 0 : s / 2),
+          x === nx ? s : cell, y === ny ? s : cell);
+      }
+    });
+    ctx.shadowBlur = 0;
+    // Eyes on the head, looking where it is going.
+    const [hx, hy] = snake[0];
+    const [dx, dy] = DIRS[dir];
+    const c = s / 2, o = s * 0.22, r = Math.max(1.2, s * 0.1);
+    ctx.fillStyle = "#000";
+    [[-1, 1], [1, -1]].forEach(([a]) => {
+      const ex = hx * cell + c + dx * o + (dy ? a * o : 0);
+      const ey = hy * cell + c + dy * o + (dx ? a * o : 0);
+      ctx.beginPath();
+      ctx.arc(ex, ey, r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
+  function turn(next) {
+    const last = queue.length ? queue[queue.length - 1] : dir;
+    const [lx, ly] = DIRS[last];
+    const [nx, ny] = DIRS[next];
+    if (lx + nx === 0 && ly + ny === 0) return;
+    if (next !== last && queue.length < 3) queue.push(next);
+  }
+
+  function tick() {
+    if (queue.length) dir = queue.shift();
+    const [dx, dy] = DIRS[dir];
+    const head = [snake[0][0] + dx, snake[0][1] + dy];
+    const key = head[0] + "," + head[1];
+    const outside = head[0] < 0 || head[1] < 0 || head[0] >= cols || head[1] >= rows;
+    const bites = food.get(key);
+    const body = bites ? snake : snake.slice(0, -1);
+    if (outside || body.some(([x, y]) => x === head[0] && y === head[1])) return die();
+
+    snake.unshift(head);
+    if (bites) {
+      food.delete(key);
+      score += bites.count;
+      lastBite = bites;
+      speed = Math.max(60, speed - 2);
+      const pretty = new Date(bites.date + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      $("log").innerHTML = `Ate <b>${bites.count}</b> contribution${bites.count === 1 ? "" : "s"} from ${pretty}.`;
+      if (score > store.get()) store.set(score);
+      if (!food.size) return win();
+      restart();
+    } else {
+      snake.pop();
+    }
+    hud();
+    draw();
+  }
+
+  function loop() { if (alive && !paused) tick(); }
+  function restart() { clearInterval(timer); timer = setInterval(loop, speed); }
+
+  function show(title, msg, label) {
+    $("title").textContent = title;
+    $("msg").innerHTML = msg;
+    $("start").textContent = label;
+    $("coin").hidden = false;
+    overlay.hidden = false;
+    $("start").focus();
+  }
+
+  function die() {
+    alive = false;
+    clearInterval(timer);
+    hud();
+    draw();
+    const why = DEATHS[Math.floor(Math.random() * DEATHS.length)];
+    const best = store.get();
+    const gap = bot.score - score;
+    const verdict = gap < 0
+      ? "You beat the bot. Screenshot it, nobody will believe you."
+      : `${n(gap)} short of the bot.${score >= best && score > 0 ? " New personal best though." : ""}`;
+    show(score > bot.score ? "YOU BEAT THE BOT" : "GAME OVER", `${why} You ate <b>${n(score)}</b>. The bot ate <b>${n(bot.score)}</b>. ${verdict}`, "INSERT COIN");
+  }
+
+  function win() {
+    alive = false;
+    clearInterval(timer);
+    hud();
+    draw();
+    show(score > bot.score ? "YOU BEAT THE BOT" : "YOU MATCHED THE BOT", `You ate all <b>${n(score)}</b> contributions. Man and machine, equal. Now go ship something so there is more to eat.`, "PLAY AGAIN");
+  }
+
+  function start() {
+    overlay.hidden = true;
+    $("coin").hidden = true;
+    reset();
+    restart();
+  }
+
+  function togglePause() {
+    if (!alive || !overlay.hidden && !paused) return;
+    paused = !paused;
+    if (paused) show("PAUSED", "Coffee break. The bot is not waiting.", "RESUME");
+    else { overlay.hidden = true; $("coin").hidden = true; }
+  }
+
+  $("start").addEventListener("click", () => {
+    if (paused) { paused = false; overlay.hidden = true; $("coin").hidden = true; return; }
+    start();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (KEYS[e.code]) {
+      e.preventDefault();
+      if (alive && !paused && overlay.hidden) turn(KEYS[e.code]);
+    } else if (e.code === "Space") {
+      e.preventDefault();
+      if (!overlay.hidden && !paused) start();
+      else togglePause();
+    }
+  });
+
+  document.querySelectorAll(".pad button").forEach((b) =>
+    b.addEventListener("pointerdown", (e) => { e.preventDefault(); if (alive && !paused) turn(b.dataset.dir); }));
+
+  let touch = null;
+  canvas.addEventListener("touchstart", (e) => { touch = e.touches[0]; }, { passive: true });
+  canvas.addEventListener("touchend", (e) => {
+    if (!touch) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touch.clientX;
+    const dy = t.clientY - touch.clientY;
+    touch = null;
+    if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
+    turn(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "right" : "left") : (dy > 0 ? "down" : "up"));
+  });
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const before = bands;
+      layout();
+      // A new fold changes the board, so start that round over.
+      if (before !== bands) { alive = false; clearInterval(timer); reset(); show("BOARD REFOLDED", "The screen changed size, so the year was folded again.", "PRESS START"); }
+      else draw();
+    }, 150);
+  });
+
+  fetch("contributions.json", { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : Promise.reject()))
+    .then((data) => { weeks = data.weeks; if (data.bot) bot = data.bot; else bot.score = data.total; })
+    .catch(() => { weeks = fakeYear(); })
+    .finally(() => {
+      if (!bot.score) bot.score = weeks.flat().reduce((sum, d) => sum + d[1], 0);
+      layout();
+      reset();
+      show("INSERT COIN", `A bot just ate <b>${n(bot.score)}</b> of my contributions without dying. Every green square is a real day I shipped. Your turn. Don't hit the walls. Don't eat yourself.`, "PRESS START");
+    });
+})();
+</script>
+</body>
+</html>

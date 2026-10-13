@@ -1,6 +1,6 @@
-// Draws an arcade-style SVG where a bot snake plays Snake on the contribution graph by itself:
-// it hunts the green days, grows with every bite, keeps score, then shows GAME OVER and loops.
-// Pure CSS animation, so it runs inside a GitHub README.
+// Draws an arcade attract screen: a bot snake plays Snake on the contribution graph by itself,
+// hunts the green days, grows, keeps score, then dares the reader to beat it and loops.
+// Pure CSS animation, so it runs inside a GitHub README. The README links it to the playable game.
 
 const C = 12; // cell size
 const GAP = 2;
@@ -181,10 +181,12 @@ export function renderSnakeGame(weeks, { user, total }) {
 
   const won = g.outcome === "win";
   const title = won ? "PERFECT RUN" : g.outcome === "starved" ? "SNAKE GOT BORED" : "GAME OVER";
-  const sub = won ? `ATE ALL ${score.toLocaleString("en-US")} CONTRIBUTIONS` : `ATE ${score.toLocaleString("en-US")} OF ${total.toLocaleString("en-US")} CONTRIBUTIONS`;
+  const sub = won
+    ? `THE BOT ATE ALL ${score.toLocaleString("en-US")}. THINK YOU CAN MATCH IT?`
+    : `THE BOT ATE ${score.toLocaleString("en-US")} OF ${total.toLocaleString("en-US")}. YOU CAN DO BETTER.`;
   const midY = OY + (H * C) / 2;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="A snake bot playing Snake on ${user}'s GitHub contribution graph">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="A snake bot playing Snake on ${user}'s GitHub contribution graph">
 <style>
 text{font-family:${FONT};font-weight:700;fill:#c9d1d9;font-size:13px}
 .dim{fill:#8b949e;font-size:11px}
@@ -206,16 +208,18 @@ ${css}
 ${scoreText}
 <text x="${width - OX - 190}" y="30" class="dim">HI-SCORE</text>
 <text x="${width - OX - 120}" y="30">${pad(total)}</text>
-<text x="${width - OX}" y="30" class="neon" text-anchor="end">AUTO</text>
+<text x="${width - OX}" y="30" class="neon" text-anchor="end">DEMO</text>
 ${cells}
 <g filter="url(#glow)"><path class="body" d="${d}"/><path class="head" d="${d}"/></g>
 <g class="over">
 <rect x="${OX - 6}" y="${OY - 6}" width="${g.W * C + 10}" height="${H * C + 10}" rx="6" fill="#010409" opacity="0.82"/>
-<text x="${width / 2}" y="${midY - 4}" text-anchor="middle" class="neon" style="font-size:22px">${title}</text>
-<text x="${width / 2}" y="${midY + 18}" text-anchor="middle" class="dim">${sub}</text>
+<text x="${width / 2}" y="${midY - 14}" text-anchor="middle" class="neon" style="font-size:22px">${title}</text>
+<text x="${width / 2}" y="${midY + 6}" text-anchor="middle" class="dim">${sub}</text>
+<text x="${width / 2}" y="${midY + 30}" text-anchor="middle" class="neon blink" style="font-size:15px">&#9654; CLICK TO PLAY</text>
 </g>
-<text x="${OX}" y="${height - 14}" class="dim">PLAYER 1: A BOT  ·  BOARD: ${user.toUpperCase()}, LAST 12 MONTHS</text>
-<text x="${width - OX}" y="${height - 14}" class="neon blink" text-anchor="end" style="font-size:11px">INSERT COIN</text>
+<text x="${OX}" y="${height - 14}" class="dim">PLAYER 1: A BOT  ·  PLAYER 2: YOU?</text>
+<text x="${width - OX}" y="${height - 14}" class="neon blink" text-anchor="end" style="font-size:11px">INSERT COIN: CLICK TO PLAY &#9654;</text>
 </svg>
 `;
+  return { svg, score, outcome: g.outcome };
 }
