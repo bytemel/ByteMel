@@ -67,30 +67,36 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 </p>
 
 <p align="center">
+  <a href="https://bytemel.github.io/ByteMel/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake-dark.svg"/>
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake.svg"/>
     <img src="https://raw.githubusercontent.com/bytemel/ByteMel/output/snake-dark.svg" alt="Snake eating my contribution graph"/>
   </picture>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://bytemel.github.io/ByteMel/"><img src="https://img.shields.io/badge/%E2%96%B6%20PLAY%20THE%20SNAKE-eat%20my%20commits-00ff41?style=for-the-badge&labelColor=000000" alt="Play Contribution Snake"/></a><br/>
+  <sub>It's a real game. Your snake, my contribution graph, arrow keys. How much of my year can you eat?</sub>
 </p>
 
 ### `> ./pulse --live`
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,089
-this week ................. 27
-current streak ............ 4 days 🌱
+contributions, last year .. 1,093
+this week ................. 31
+current streak ............ 2 days 🌱
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
 last public push .......... inside a client repo 🤫
 
 100-day streak challenge
-[█░░░░░░░░░░░░░░░░░░░] 4/100
+[░░░░░░░░░░░░░░░░░░░░] 2/100
 
 today's side quest: Make one page load faster
 ```
-<sub>A bot rewrites this every 6 hours. Last run: 13 Oct 2026, 10:15 EAT.</sub>
 <!--PULSE:END-->
 
 ### `> cat ./off-the-keyboard`

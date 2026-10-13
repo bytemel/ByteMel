@@ -1,6 +1,6 @@
 // Rewrites the PULSE block in README.md with live GitHub numbers.
 // Runs from .github/workflows/pulse.yml. Node 20+, no dependencies.
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const USER = process.env.GH_USER || "bytemel";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -106,7 +106,6 @@ const now = new Date();
 const dayOfYear = Math.floor((now - new Date(now.getUTCFullYear(), 0, 0)) / 86400000);
 const quest = QUESTS[dayOfYear % QUESTS.length];
 const fire = current >= 30 ? "🔥🔥🔥" : current >= 7 ? "🔥" : current > 0 ? "🌱" : "😴 (time to wake up)";
-const stamp = now.toLocaleString("en-GB", { timeZone: "Africa/Nairobi", dateStyle: "medium", timeStyle: "short" });
 
 const lines = [
   row("contributions, last year", cal.totalContributions.toLocaleString("en-US")),
@@ -127,7 +126,6 @@ const block = [
   "```text",
   ...lines,
   "```",
-  `<sub>A bot rewrites this every 6 hours. Last run: ${stamp} EAT.</sub>`,
   END,
 ].join("\n");
 
@@ -136,3 +134,9 @@ const pattern = new RegExp(`${START}[\\s\\S]*?${END}`);
 if (!pattern.test(readme)) throw new Error("PULSE markers missing from README.md");
 await writeFile(README, readme.replace(pattern, block));
 console.log(block);
+
+// The snake game on GitHub Pages plays on this grid.
+const DOCS = new URL("../docs/", import.meta.url);
+await mkdir(DOCS, { recursive: true });
+const grid = cal.weeks.map((w) => w.contributionDays.map((d) => [d.date, d.contributionCount]));
+await writeFile(new URL("contributions.json", DOCS), JSON.stringify({ user: USER, total: cal.totalContributions, weeks: grid }));
