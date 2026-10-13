@@ -78,15 +78,15 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,088
-this week ................. 26
-current streak ............ 2 days 🌱
+contributions, last year .. 1,089
+this week ................. 27
+current streak ............ 4 days 🌱
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
 last public push .......... inside a client repo 🤫
 
 100-day streak challenge
-[░░░░░░░░░░░░░░░░░░░░] 2/100
+[█░░░░░░░░░░░░░░░░░░░] 4/100
 
 today's side quest: Make one page load faster
 ```
