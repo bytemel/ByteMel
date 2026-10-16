@@ -89,7 +89,7 @@ last public push .......... inside a client repo 🤫
 100-day streak challenge
 [█░░░░░░░░░░░░░░░░░░░] 6/100
 
-today's side quest: Teach someone one thing I learned this week
+today's side quest: Close a tab I opened in 2025
 ```
 <!--PULSE:END-->
 
