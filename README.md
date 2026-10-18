@@ -80,7 +80,7 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 <!--PULSE:START-->
 ```text
 contributions, last year .. 1,149
-this week ................. 76
+this week ................. 75
 current streak ............ 0 days 😴 (time to wake up)
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
@@ -89,7 +89,7 @@ last public push .......... inside a client repo 🤫
 100-day streak challenge
 [░░░░░░░░░░░░░░░░░░░░] 0/100
 
-today's side quest: Write a post instead of a draft
+today's side quest: Say no to one meeting, say yes to one build
 ```
 <!--PULSE:END-->
 
