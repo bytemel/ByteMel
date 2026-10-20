@@ -20,7 +20,7 @@
 
 ---
 
-<img src="https://raw.githubusercontent.com/bytemel/readme/main/matrix.gif" align="right" width="300" alt="Matrix rain"/>
+<img src="assets/status-board.svg" align="right" width="300" alt="Live uptime of the sites I built, checked every 6 hours"/>
 
 ### `> whoami`
 
@@ -42,17 +42,19 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 
 ### `> ls ./shipped --2026`
 
-| | Project | What it is | My part |
-|---|---|---|---|
-| 🌍 | [AfriESG Metrics](https://afriesg.africa) | ESG platform: public site and CMS, multi-tenant product app, data collection tool | Sole developer, product lead |
-| 🏡 | [Epic Prime Investments](https://epicprime.co.ke) | Land sales site, customer portal, back office CRM | Sole developer |
-| 💜 | [Nawiri Sisters Foundation](https://nawirisisters.org) | Donations, events, ticketing, CMS | Sole developer |
-| 🎨 | [Canvathon Kenya](https://canvathon-kenya.vercel.app) | Design competition: briefs, submissions, judging, results | Built it |
-| 🏛️ | [Arkaiv](https://arkaivafrica.com) | Governance SaaS | V1 iteration |
-| ✍️ | [magotheinnocent.com](https://magotheinnocent.com) | Founder portfolio with its own CMS | Built it |
-| 🗺️ | [Docent](https://docent-drab.vercel.app) | Animated A to B route links with live tracking | Mine |
-| 🗣️ | Tafsiri | Chrome extension: live meeting captions translated on device (Meet, Teams, Zoom web) | Mine, Web Store soon |
-| ⚡ | [timmwangi.com](https://timmwangi.com) | My site and blog on a Supabase CMS I built | Mine |
+| Project | What it is |
+|---|---|
+| [AfriESG Metrics](https://afriesg.africa) | ESG platform: public site and CMS, multi-tenant product app, data collection tool |
+| [Epic Prime Investments](https://epicprime.co.ke) | Land sales site, customer portal, back office CRM |
+| [Nawiri Sisters Foundation](https://nawirisisters.org) | Donations, events, ticketing, CMS |
+| [Mozini Gifts](https://www.mozinigifts.com) | Gift shop: storefront, Paystack and WhatsApp checkout, back office |
+| [Amplify Africa](https://www.weamplifyafrica.org) | Site, academy applications with Paystack, admin |
+| [Canvathon Kenya](https://canvathon-kenya.vercel.app) | Design competition: briefs, submissions, judging, results |
+| [Arkaiv](https://arkaivafrica.com) | Governance SaaS |
+| [magotheinnocent.com](https://magotheinnocent.com) | Founder portfolio with its own CMS |
+| [Docent](https://docent-drab.vercel.app) | Animated A to B route links with live tracking |
+| Tafsiri | Chrome extension: live meeting captions translated on device (Meet, Teams, Zoom web) |
+| [timmwangi.com](https://timmwangi.com) | My site and blog on a Supabase CMS I built |
 
 ### `> cat ./stack`
 
@@ -95,26 +97,26 @@ today's side quest: Ship it ugly, polish it after
 
 ### `> cat ./off-the-keyboard`
 
-- 🎓 Alumni Relations Lead at **AfricaHackon**, social media lead at **Hackhouse Africa**
-- 🧒 Product Manager at **Teckid**, an online coding school for kids
-- 📚 Supported 2,000+ learners at **ALX** and walked a cohort of 160+ to graduation
-- 🚀 Main contact for 70+ founders in **Startup Garage Africa** cohort 1
-- 🖌️ Canva Canvassador
+- I run alumni relations at **AfricaHackon** and the socials at **Hackhouse Africa**.
+- I'm product manager at **Teckid**, an online coding school for kids.
+- At **ALX** I supported more than 2,000 learners and walked one cohort of 160+ all the way to graduation.
+- I was the main contact for 70+ founders in the first **Startup Garage Africa** cohort.
+- I'm a Canva Canvassador.
 
 ### `> ./now`
 
-- [x] Ship client systems that run without me in the room
-- [ ] Get Tafsiri onto the Chrome Web Store (reviewers, be gentle)
-- [ ] Write more about building for African programmes and communities
+- Building client systems that keep working when I'm not in the room.
+- Getting Tafsiri onto the Chrome Web Store.
+- Writing more about what it takes to build for programmes and communities here.
 
 ### `> ./side-quests --hard-mode`
 
-- [ ] Push code 100 days in a row (the bot below is keeping score, no cheating)
-- [ ] Ship one small, slightly ridiculous project a month, just for fun
-- [ ] Build something in a language I have never touched
-- [ ] Get a stranger to star a repo of mine
-- [ ] Learn psychology properly, then build something with it
-- [ ] Touch grass at least once a week. Verified by photo.
+- [ ] Push code 100 days in a row. The counter above keeps me honest.
+- [ ] Ship one small, silly project a month, for no reason at all.
+- [ ] Build something in a language I've never written.
+- [ ] Get a stranger to star one of my repos.
+- [ ] Learn psychology properly, then build something with it.
+- [ ] Get outside more. Weekly, not "when things calm down".
 
 <p align="center">
   <b>Running a programme, a community or a startup that needs something to work properly?</b><br/>

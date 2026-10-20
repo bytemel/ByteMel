@@ -2,6 +2,7 @@
 // Runs from .github/workflows/pulse.yml. Node 20+, no dependencies.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { renderSnakeGame } from "./snake-game.mjs";
+import { checkSites, renderStatusBoard } from "./status-board.mjs";
 
 const USER = process.env.GH_USER || "bytemel";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -150,3 +151,6 @@ await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
   bot: { score: demo.score, outcome: demo.outcome },
   weeks: weeksForGame.map((days) => days.map((d) => [d.date, d.count, d.weekday])),
 }));
+
+// The uptime board beside `whoami`.
+await writeFile(new URL("status-board.svg", ASSETS), renderStatusBoard(await checkSites()));
