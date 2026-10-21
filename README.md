@@ -36,7 +36,7 @@ const tim = {
 };
 ```
 
-Most of my code lives in client repos, so the graph below tells more of the story than my public repos do.
+Most of my client code is private. The code I can share is in `./open-source` below.
 
 <br clear="right"/>
 
@@ -53,8 +53,19 @@ Most of my code lives in client repos, so the graph below tells more of the stor
 | [Arkaiv](https://arkaivafrica.com) | Governance SaaS |
 | [magotheinnocent.com](https://magotheinnocent.com) | Founder portfolio with its own CMS |
 | [Docent](https://docent-drab.vercel.app) | Animated A to B route links with live tracking |
-| Tafsiri | Chrome extension: live meeting captions translated on device (Meet, Teams, Zoom web) |
+| [Tafsiri](https://github.com/bytemel/tafsiri) | Chrome extension: live meeting captions translated on device (Meet, Teams, Zoom web) |
 | [timmwangi.com](https://timmwangi.com) | My site and blog on a Supabase CMS I built |
+
+### `> ls ./open-source`
+
+| Repo | What it does |
+|---|---|
+| [docent](https://github.com/bytemel/docent) | Directions as a short animated route in one link, built for Kenyan phones and data. Next.js, Supabase |
+| [tafsiri](https://github.com/bytemel/tafsiri) | Chrome extension: live meeting translation that runs on your own computer with Chrome's built-in AI |
+| [cohort-pulse](https://github.com/bytemel/cohort-pulse) | Drop in a cohort CSV and see who needs a nudge, with a WhatsApp draft for each. [Try it](https://bytemel.github.io/cohort-pulse/) |
+| [paystack-mpesa-kit](https://github.com/bytemel/paystack-mpesa-kit) | M-Pesa and card checkout through Paystack: signed webhooks, server-side amounts, idempotent settlement |
+| [site-launch-check](https://github.com/bytemel/site-launch-check) | 20 pre-launch checks for any website in one command |
+| [ALX work](https://github.com/search?q=user%3Abytemel+topic%3Aalx&type=repositories) | C and Python from scratch: a UNIX shell, a bytecode interpreter, sorting, binary trees, an AirBnB clone API |
 
 ### `> cat ./stack`
 
