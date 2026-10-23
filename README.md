@@ -107,7 +107,7 @@ last public push .......... inside a client repo 🤫
 100-day streak challenge
 [█░░░░░░░░░░░░░░░░░░░] 4/100
 
-today's side quest: Delete more code than I write
+today's side quest: Build a thing in under an hour, just because
 ```
 <!--PULSE:END-->
 
