@@ -62,14 +62,17 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 | Repo | What it does |
 |---|---|
-| [docent](https://github.com/bytemel/docent) | Directions as a short animated route in one link, built for Kenyan phones and data. Next.js, Supabase |
-| [tafsiri](https://github.com/bytemel/tafsiri) | Chrome extension: live meeting translation that runs on your own computer with Chrome's built-in AI |
+| [docent](https://github.com/bytemel/docent) | Directions as a short animated route in one link, built for Kenyan phones and data. Next.js, Supabase. [Try it](https://docent-drab.vercel.app) |
+| [tafsiri](https://github.com/bytemel/tafsiri) | Chrome extension: live meeting translation that runs on your own computer with Chrome's built-in AI. [Install it](https://chromewebstore.google.com/detail/tafsiri-live-meeting-tran/jabmecmcfkdnnkkiehnfokifbbfbbkbd) |
+| [mentor-hours](https://github.com/bytemel/mentor-hours) | Office hours for hubs and cohorts: mentors open slots, founders book with one link, Postgres makes double booking impossible. Neon, Vercel. [Try it](https://mentor-hours.vercel.app/b/demo) |
+| [campaign-links](https://github.com/bytemel/campaign-links) | A short link per channel, so you know if WhatsApp, LinkedIn or the posters brought the applicants. Link previews counted apart. Neon, Vercel. [Try it](https://campaign-links-theta.vercel.app/s/demo) |
+| [event-feedback](https://github.com/bytemel/event-feedback) | One QR on the last slide, 30-second answers, live Net Promoter Score before people leave. Neon, Vercel. [Try it](https://event-feedback-ten.vercel.app/f/demo) |
 | [judging-desk](https://github.com/bytemel/judging-desk) | Fair scoring for hackathons and competitions: cancels out harsh and lenient judges, flags gaps and conflicts. [Try it](https://bytemel.github.io/judging-desk/) |
 | [event-checkin](https://github.com/bytemel/event-checkin) | Door check-in on a phone that keeps working when the wifi dies, with QR tickets and two-phone merge. [Try it](https://bytemel.github.io/event-checkin/) |
 | [cohort-pulse](https://github.com/bytemel/cohort-pulse) | Drop in a cohort CSV and see who needs a nudge, with a WhatsApp draft for each. [Try it](https://bytemel.github.io/cohort-pulse/) |
-| [sms-kit-kenya](https://github.com/bytemel/sms-kit-kenya) | Africa's Talking SMS without the surprises: Unicode costs, number cleanup, STOP opt-outs, no double sends |
-| [paystack-mpesa-kit](https://github.com/bytemel/paystack-mpesa-kit) | M-Pesa and card checkout through Paystack: signed webhooks, server-side amounts, idempotent settlement |
-| [site-launch-check](https://github.com/bytemel/site-launch-check) | 20 pre-launch checks for any website in one command |
+| [paystack-mpesa-kit](https://github.com/bytemel/paystack-mpesa-kit) | M-Pesa and card checkout through Paystack: signed webhooks, server-side amounts, idempotent settlement. [Try the sandbox](https://paystack-mpesa-kit.vercel.app) |
+| [sms-kit-kenya](https://github.com/bytemel/sms-kit-kenya) | Africa's Talking SMS without the surprises: Unicode costs, number cleanup, STOP opt-outs, no double sends. [Try it](https://bytemel.github.io/sms-kit-kenya/) |
+| [site-launch-check](https://github.com/bytemel/site-launch-check) | 20 pre-launch checks for any website, in the browser or one command. [Try it](https://site-launch-check.vercel.app) |
 | [ALX work](https://github.com/search?q=user%3Abytemel+topic%3Aalx&type=repositories) | C and Python from scratch: a UNIX shell, a bytecode interpreter, sorting, binary trees, an AirBnB clone API |
 
 ### `> cat ./stack`
