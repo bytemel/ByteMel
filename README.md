@@ -104,16 +104,16 @@ Tools I built for the work I do: running programmes, running communities, and wi
 <!--PULSE:START-->
 ```text
 contributions, last year .. 1,309
-this week ................. 111
+this week ................. 101
 current streak ............ 1 day 🌱
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
-last public push .......... tafsiri, 3d ago
+last public push .......... tafsiri, 4d ago
 
 100-day streak challenge
 [░░░░░░░░░░░░░░░░░░░░] 1/100
 
-today's side quest: Teach someone one thing I learned this week
+today's side quest: Close a tab I opened in 2025
 ```
 <!--PULSE:END-->
 
