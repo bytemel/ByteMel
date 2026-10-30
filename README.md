@@ -88,8 +88,8 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <p align="left">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=light&perline=15"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs%2Creact%2Cts%2Cjs%2Ctailwind%2Csupabase%2Cpostgres%2Cvercel%2Cnodejs%2Cpython%2Cc%2Cgit%2Cgithub%2Cfigma%2Clinux&theme=dark&perline=15"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs%2Creact%2Cts%2Cjs%2Ctailwind%2Csupabase%2Cpostgres%2Cvercel%2Cnodejs%2Cpython%2Cc%2Cgit%2Cgithub%2Cfigma%2Clinux&theme=light&perline=15"/>
     <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15" alt="Next.js, React, TypeScript, JavaScript, Tailwind, Supabase, Postgres, Vercel, Node.js, Python, C, Git, GitHub, Figma, Linux"/>
   </picture>
 </p>
