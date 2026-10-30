@@ -1,14 +1,14 @@
 // Draws an arcade attract screen: a bot snake plays Snake on the contribution graph by itself,
 // hunts the green days, grows, keeps score, then dares the reader to beat it and loops.
 // Pure CSS animation, so it runs inside a GitHub README. The README links it to the playable game.
+// Drawn once per theme: a neon arcade at night, a black snake on a light board by day.
+import { THEMES } from "./themes.mjs";
 
 const C = 12; // cell size
 const GAP = 2;
 const H = 7;
 const OX = 16;
 const OY = 52;
-const SHADES = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
-const NEON = "#00ff41";
 const FONT = "'Courier New', Courier, monospace";
 
 function shader(counts) {
@@ -119,8 +119,9 @@ function play(weeks) {
 const pct = (t, T) => `${((t / T) * 100).toFixed(4)}%`;
 const pad = (n) => String(n).padStart(6, "0");
 
-export function renderSnakeGame(weeks, { user, total }) {
+export function renderSnakeGame(weeks, { user, total, theme = THEMES.dark }) {
   const g = play(weeks);
+  const { shades: SHADES, accent: NEON } = theme;
   const dt = Math.min(0.09, Math.max(0.035, 60 / Math.max(1, g.steps)));
   const Tg = g.steps * dt; // game time
   const T = Tg + 4.5; // plus the game over screen
@@ -188,21 +189,22 @@ export function renderSnakeGame(weeks, { user, total }) {
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="A snake bot playing Snake on ${user}'s GitHub contribution graph">
 <style>
-text{font-family:${FONT};font-weight:700;fill:#c9d1d9;font-size:13px}
-.dim{fill:#8b949e;font-size:11px}
+text{font-family:${FONT};font-weight:700;fill:${theme.text};font-size:13px}
+.dim{fill:${theme.muted};font-size:11px}
 .neon{fill:${NEON}}
 .blink{animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
-.body{fill:none;stroke:${NEON};stroke-width:${C * 0.72};stroke-linecap:round;stroke-linejoin:round;animation:body ${T.toFixed(2)}s linear infinite}
+.body{fill:none;stroke:${theme.snake};stroke-width:${C * 0.72};stroke-linecap:round;stroke-linejoin:round;animation:body ${T.toFixed(2)}s linear infinite}
 @keyframes body{${bodyFrames}}
-.head{fill:none;stroke:#eafff0;stroke-width:${C * 0.5};stroke-linecap:round;stroke-dasharray:0.01 ${far};animation:head ${T.toFixed(2)}s linear infinite}
+.head{fill:none;stroke:${theme.snakeHead};stroke-width:${C * 0.5};stroke-linecap:round;stroke-dasharray:0.01 ${far};animation:head ${T.toFixed(2)}s linear infinite}
 @keyframes head{${headFrames}}
 .over{opacity:0;animation:over ${T.toFixed(2)}s step-end infinite}
 @keyframes over{0%{opacity:0}${pct(Tg, T)}{opacity:1}}
 ${css}
+@media (prefers-reduced-motion:reduce){.blink{animation:none}}
 </style>
 <defs><filter id="glow" x="-5%" y="-30%" width="110%" height="160%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="10" fill="#010409" stroke="#1f6f2f" stroke-width="2"/>
+<rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="10" fill="${theme.panel}" stroke="${theme.border}" stroke-width="2"/>
 <text x="${OX}" y="30" class="neon blink">1UP</text>
 <text x="${OX + 60}" y="30" class="dim">SCORE</text>
 ${scoreText}
@@ -210,9 +212,9 @@ ${scoreText}
 <text x="${width - OX - 120}" y="30">${pad(total)}</text>
 <text x="${width - OX}" y="30" class="neon" text-anchor="end">DEMO</text>
 ${cells}
-<g filter="url(#glow)"><path class="body" d="${d}"/><path class="head" d="${d}"/></g>
+<g${theme.glow ? ' filter="url(#glow)"' : ""}><path class="body" d="${d}"/><path class="head" d="${d}"/></g>
 <g class="over">
-<rect x="${OX - 6}" y="${OY - 6}" width="${g.W * C + 10}" height="${H * C + 10}" rx="6" fill="#010409" opacity="0.82"/>
+<rect x="${OX - 6}" y="${OY - 6}" width="${g.W * C + 10}" height="${H * C + 10}" rx="6" fill="${theme.panel}" opacity="0.88"/>
 <text x="${width / 2}" y="${midY - 14}" text-anchor="middle" class="neon" style="font-size:22px">${title}</text>
 <text x="${width / 2}" y="${midY + 6}" text-anchor="middle" class="dim">${sub}</text>
 <text x="${width / 2}" y="${midY + 30}" text-anchor="middle" class="neon blink" style="font-size:15px">&#9654; CLICK TO PLAY</text>

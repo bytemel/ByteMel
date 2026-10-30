@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="302" viewBox="0 0 300 302" role="img" aria-label="10 of 10 sites I built are up">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; }
+    .host { fill: #1f2328; }
+    .head { fill: #1a7f37; font-weight: 600; }
+    .sub { fill: #59636e; font-size: 11px; }
+    .dot.up { animation: beat 2.4s ease-in-out infinite; }
+    .dot.down { animation: blink 0.8s steps(2) infinite; }
+    .cursor { animation: blink 1s steps(2) infinite; }
+    @keyframes beat { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .dot, .cursor { animation: none; } }
+  </style>
+  <rect x="0.5" y="0.5" width="299" height="301" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <circle cx="16" cy="14" r="4" fill="#ff5f56"/><circle cx="30" cy="14" r="4" fill="#ffbd2e"/><circle cx="44" cy="14" r="4" fill="#27c93f"/>
+  <text x="14" y="38" class="head">&gt; ./uptime --built-by-me</text>
+  <circle class="dot up" style="animation-delay:0.00s" cx="22" cy="54" r="4" fill="#1a7f37"/>
+  <text x="34" y="58" class="host">afriesg.africa</text>
+  <text x="284" y="58" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:0.23s" cx="22" cy="76" r="4" fill="#1a7f37"/>
+  <text x="34" y="80" class="host">epicprime.co.ke</text>
+  <text x="284" y="80" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:0.46s" cx="22" cy="98" r="4" fill="#1a7f37"/>
+  <text x="34" y="102" class="host">nawirisisters.org</text>
+  <text x="284" y="102" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:0.69s" cx="22" cy="120" r="4" fill="#1a7f37"/>
+  <text x="34" y="124" class="host">mozinigifts.com</text>
+  <text x="284" y="124" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:0.92s" cx="22" cy="142" r="4" fill="#1a7f37"/>
+  <text x="34" y="146" class="host">weamplifyafrica.org</text>
+  <text x="284" y="146" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:1.15s" cx="22" cy="164" r="4" fill="#1a7f37"/>
+  <text x="34" y="168" class="host">canvathon-kenya.vercel.app</text>
+  <text x="284" y="168" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:1.38s" cx="22" cy="186" r="4" fill="#1a7f37"/>
+  <text x="34" y="190" class="host">arkaivafrica.com</text>
+  <text x="284" y="190" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:1.61s" cx="22" cy="208" r="4" fill="#1a7f37"/>
+  <text x="34" y="212" class="host">magotheinnocent.com</text>
+  <text x="284" y="212" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:1.84s" cx="22" cy="230" r="4" fill="#1a7f37"/>
+  <text x="34" y="234" class="host">docent-drab.vercel.app</text>
+  <text x="284" y="234" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <circle class="dot up" style="animation-delay:2.07s" cx="22" cy="252" r="4" fill="#1a7f37"/>
+  <text x="34" y="256" class="host">timmwangi.com</text>
+  <text x="284" y="256" class="state" fill="#1a7f37" text-anchor="end">up</text>
+  <text x="14" y="288" class="sub">10/10 up, still running without me</text>
+  <rect class="cursor" x="278" y="278" width="7" height="13" fill="#1a7f37"/>
+</svg>

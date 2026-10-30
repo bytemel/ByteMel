@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="302" viewBox="0 0 300 302" role="img" aria-label="10 of 10 sites I built are up">
   <style>
-    text { font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
-    .host { fill: #c9d1d9; }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; }
+    .host { fill: #e6edf3; }
     .head { fill: #00ff41; font-weight: 600; }
     .sub { fill: #8b949e; font-size: 11px; }
     .dot.up { animation: beat 2.4s ease-in-out infinite; }
@@ -9,8 +9,9 @@
     .cursor { animation: blink 1s steps(2) infinite; }
     @keyframes beat { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
     @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .dot, .cursor { animation: none; } }
   </style>
-  <rect x="0.5" y="0.5" width="299" height="301" rx="8" fill="#0d1117" stroke="#00ff41" stroke-opacity="0.6"/>
+  <rect x="0.5" y="0.5" width="299" height="301" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <circle cx="16" cy="14" r="4" fill="#ff5f56"/><circle cx="30" cy="14" r="4" fill="#ffbd2e"/><circle cx="44" cy="14" r="4" fill="#27c93f"/>
   <text x="14" y="38" class="head">&gt; ./uptime --built-by-me</text>
   <circle class="dot up" style="animation-delay:0.00s" cx="22" cy="54" r="4" fill="#00ff41"/>

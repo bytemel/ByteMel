@@ -3,6 +3,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { renderSnakeGame } from "./snake-game.mjs";
 import { checkSites, renderStatusBoard } from "./status-board.mjs";
+import { THEMES } from "./themes.mjs";
 
 const USER = process.env.GH_USER || "bytemel";
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -145,6 +146,7 @@ await mkdir(DOCS, { recursive: true });
 const weeksForGame = cal.weeks.map((w) => w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, weekday: d.weekday })));
 const demo = renderSnakeGame(weeksForGame, { user: USER, total: cal.totalContributions });
 await writeFile(new URL("snake-game.svg", ASSETS), demo.svg);
+await writeFile(new URL("snake-game-light.svg", ASSETS), renderSnakeGame(weeksForGame, { user: USER, total: cal.totalContributions, theme: THEMES.light }).svg);
 await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
   user: USER,
   total: cal.totalContributions,
@@ -153,4 +155,6 @@ await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
 }));
 
 // The uptime board beside `whoami`.
-await writeFile(new URL("status-board.svg", ASSETS), renderStatusBoard(await checkSites()));
+const sites = await checkSites();
+await writeFile(new URL("status-board.svg", ASSETS), renderStatusBoard(sites));
+await writeFile(new URL("status-board-light.svg", ASSETS), renderStatusBoard(sites, THEMES.light));

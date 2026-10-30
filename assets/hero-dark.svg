@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" width="1000" height="330" role="img" aria-label="Timothy Mwangi. I make programmes and communities run, and I build the tools they need.">
+<style>
+text{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}
+.dim{fill:#8b949e;font-size:14px}
+.acc{fill:#00ff41}
+.cmd{fill:#e6edf3;font-size:18px}
+.name{fill:#e6edf3;font-size:58px;font-weight:700}
+.line{fill:#e6edf3;font-size:20px}
+.cur{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.beat{fill:none;stroke:#00ff41;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:140 900;animation:run 3.2s linear infinite}
+@keyframes run{from{stroke-dashoffset:140}to{stroke-dashoffset:-760}}
+.l0{opacity:0;animation:o0 21s infinite step-end}@keyframes o0{0%{opacity:0}0.000%{opacity:1}20.000%{opacity:0}}.c0{animation:c0 21s infinite linear}@keyframes c0{0%,0.000%{transform:translateX(0)}8.143%,15.714%{transform:translateX(456px)}18.333%,100%{transform:translateX(0)}}.l1{opacity:0;animation:o1 21s infinite step-end}@keyframes o1{0%{opacity:0}20.000%{opacity:1}40.000%{opacity:0}}.c1{animation:c1 21s infinite linear}@keyframes c1{0%,20.000%{transform:translateX(0)}26.857%,35.714%{transform:translateX(384px)}38.333%,100%{transform:translateX(0)}}.l2{opacity:0;animation:o2 21s infinite step-end}@keyframes o2{0%{opacity:0}40.000%{opacity:1}60.000%{opacity:0}}.c2{animation:c2 21s infinite linear}@keyframes c2{0%,40.000%{transform:translateX(0)}49.000%,55.714%{transform:translateX(504px)}58.333%,100%{transform:translateX(0)}}.l3{opacity:0;animation:o3 21s infinite step-end}@keyframes o3{0%{opacity:0}60.000%{opacity:1}80.000%{opacity:0}}.c3{animation:c3 21s infinite linear}@keyframes c3{0%,60.000%{transform:translateX(0)}69.857%,75.714%{transform:translateX(552px)}78.333%,100%{transform:translateX(0)}}.l4{opacity:0;animation:o4 21s infinite step-end}@keyframes o4{0%{opacity:0}80.000%{opacity:1}100.000%{opacity:0}}.c4{animation:c4 21s infinite linear}@keyframes c4{0%,80.000%{transform:translateX(0)}88.143%,95.714%{transform:translateX(456px)}98.333%,100%{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.cur,.beat,[class^=c]{animation:none}.beat{stroke-dasharray:none}[class^=l]{animation:none}.l0{opacity:1}.c0{transform:translateX(456px)}}
+</style>
+<rect x="1" y="1" width="998" height="328" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+<path d="M1 44 H999" stroke="#30363d" stroke-width="2"/>
+<circle cx="28" cy="23" r="7" fill="#ff5f56"/><circle cx="50" cy="23" r="7" fill="#ffbd2e"/><circle cx="72" cy="23" r="7" fill="#27c93f"/>
+<text x="500" y="28" text-anchor="middle" class="dim">tim@nairobi: ~/ByteMel</text>
+<text x="40" y="88" class="cmd"><tspan class="acc">$</tspan> whoami</text>
+<text x="40" y="156" class="name" textLength="487.2" lengthAdjust="spacingAndGlyphs">Timothy Mwangi</text>
+<path d="M600 132 H960" stroke="#30363d" stroke-width="2" stroke-dasharray="2 6"/>
+<path class="beat" d="M600 132 H700 l12 -2 l8 6 l10 -44 l12 74 l10 -40 l8 6 H820 l10 -18 l10 18 H960"/>
+<text x="960" y="186" text-anchor="end" class="dim">systems that keep running</text>
+<text x="40" y="216" class="cmd"><tspan class="acc">$</tspan> cat ./mission</text>
+<text x="40" y="252" class="line acc">&gt;</text>
+<clipPath id="inner"><rect x="3" y="46" width="994" height="280"/></clipPath>
+<g clip-path="url(#inner)"><g class="l0"><text x="72" y="252" textLength="456" lengthAdjust="spacingAndGlyphs" class="line">I make programmes and communities run.</text><g class="c0"><rect x="72" y="230" width="476" height="30" fill="#0d1117"/><rect class="cur" x="74" y="235" width="11" height="22" fill="#00ff41"/></g></g><g class="l1"><text x="72" y="252" textLength="384" lengthAdjust="spacingAndGlyphs" class="line">And I build the tools they need.</text><g class="c1"><rect x="72" y="230" width="404" height="30" fill="#0d1117"/><rect class="cur" x="74" y="235" width="11" height="22" fill="#00ff41"/></g></g><g class="l2"><text x="72" y="252" textLength="504" lengthAdjust="spacingAndGlyphs" class="line">Next.js + Supabase + Vercel, shipped solo.</text><g class="c2"><rect x="72" y="230" width="524" height="30" fill="#0d1117"/><rect class="cur" x="74" y="235" width="11" height="22" fill="#00ff41"/></g></g><g class="l3"><text x="72" y="252" textLength="552" lengthAdjust="spacingAndGlyphs" class="line">Paystack, M-Pesa, SMS, email: wired for Kenya.</text><g class="c3"><rect x="72" y="230" width="572" height="30" fill="#0d1117"/><rect class="cur" x="74" y="235" width="11" height="22" fill="#00ff41"/></g></g><g class="l4"><text x="72" y="252" textLength="456" lengthAdjust="spacingAndGlyphs" class="line">Tafsiri: live on the Chrome Web Store.</text><g class="c4"><rect x="72" y="230" width="476" height="30" fill="#0d1117"/><rect class="cur" x="74" y="235" width="11" height="22" fill="#00ff41"/></g></g></g>
+<text x="40" y="306" class="dim">-1.2921, 36.8219 · Nairobi, Kenya</text>
+<text x="960" y="306" text-anchor="end" class="dim">timmwangi.com</text>
+</svg>

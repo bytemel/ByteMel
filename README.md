@@ -1,8 +1,10 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003b00,100:00ff41&height=180&section=header&text=Timothy%20Mwangi&fontColor=ffffff&fontSize=52&fontAlignY=36&desc=Nairobi%20%E2%80%A2%20builder%20of%20systems%20that%20keep%20running&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
-
 <p align="center">
   <a href="https://timmwangi.com">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=00FF41&center=true&vCenter=true&width=640&lines=I+make+programmes+and+communities+run.;And+I+build+the+tools+they+need.;Next.js+%2B+Supabase+%2B+Vercel%2C+shipped+solo.;Paystack%2C+M-Pesa%2C+SMS%2C+email%3A+wired+for+Kenya.;Currently+shipping%3A+Tafsiri+for+Chrome." alt="Typing intro"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/hero-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/hero-light.svg"/>
+    <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/hero-dark.svg" width="100%" alt="Timothy Mwangi. I make programmes and communities run, and I build the tools they need."/>
+  </picture>
   </a>
 </p>
 
@@ -20,7 +22,11 @@
 
 ---
 
-<img src="assets/status-board.svg" align="right" width="300" alt="Live uptime of the sites I built, checked every 6 hours"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/status-board.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/status-board-light.svg"/>
+  <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/status-board.svg" align="right" width="300" alt="Live uptime of the sites I built, checked every 6 hours"/>
+</picture>
 
 ### `> whoami`
 
@@ -81,17 +87,31 @@ Tools I built for the work I do: running programmes, running communities, and wi
 ### `> cat ./stack`
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15" alt="Stack"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=light&perline=15"/>
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,supabase,postgres,vercel,nodejs,python,c,git,github,figma,linux&theme=dark&perline=15" alt="Next.js, React, TypeScript, JavaScript, Tailwind, Supabase, Postgres, Vercel, Node.js, Python, C, Git, GitHub, Figma, Linux"/>
+  </picture>
 </p>
 
 ### `> ./activity`
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=bytemel&theme=dark&background=0D1117&border=00ff41&ring=00ff41&fire=00ff41&currStreakNum=00ff41&sideNums=ffffff&currStreakLabel=00ff41&sideLabels=c9d1d9&dates=8b949e&hide_border=false" alt="Contribution streak"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=bytemel&background=0D1117&border=30363D&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=E6EDF3&currStreakLabel=00FF41&sideLabels=8B949E&dates=8B949E"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=bytemel&background=F6F8FA&border=D0D7DE&ring=1A7F37&fire=1A7F37&currStreakNum=1A7F37&sideNums=1F2328&currStreakLabel=1A7F37&sideLabels=59636E&dates=59636E"/>
+    <img src="https://streak-stats.demolab.com?user=bytemel&background=0D1117&border=30363D&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=E6EDF3&currStreakLabel=00FF41&sideLabels=8B949E&dates=8B949E" alt="Contribution streak"/>
+  </picture>
 </p>
 
 <p align="center">
-  <a href="https://bytemel.github.io/ByteMel/"><img src="assets/snake-game.svg" width="100%" alt="Demo: a bot plays Snake on my contribution graph and eats every green day. Click to play."/></a>
+  <a href="https://bytemel.github.io/ByteMel/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/snake-game.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/snake-game-light.svg"/>
+    <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/snake-game.svg" width="100%" alt="Demo: a bot plays Snake on my contribution graph and eats every green day. Click to play."/>
+  </picture>
+  </a>
 </p>
 
 <p align="center">
@@ -103,15 +123,15 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,309
-this week ................. 101
-current streak ............ 1 day 🌱
+contributions, last year .. 1,311
+this week ................. 104
+current streak ............ 2 days 🌱
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
 last public push .......... tafsiri, 4d ago
 
 100-day streak challenge
-[░░░░░░░░░░░░░░░░░░░░] 1/100
+[░░░░░░░░░░░░░░░░░░░░] 2/100
 
 today's side quest: Close a tab I opened in 2025
 ```
@@ -145,4 +165,10 @@ today's side quest: Close a tab I opened in 2025
   <a href="https://calendly.com/timmwangi/">Book a call</a> or <a href="mailto:timmwangim@gmail.com">email me</a>.
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,50:003b00,100:000000&height=110&section=footer" width="100%"/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/footer-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/footer-light.svg"/>
+    <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/footer-dark.svg" width="100%" alt="$ exit. Thanks for reading."/>
+  </picture>
+</p>

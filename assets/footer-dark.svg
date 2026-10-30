@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 96" width="1000" height="96" role="img" aria-label="Thanks for reading.">
+<style>
+text{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;font-size:16px;fill:#e6edf3}
+.dim{fill:#8b949e}
+.acc{fill:#00ff41}
+.cur{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cur{animation:none}}
+</style>
+<rect x="1" y="1" width="998" height="94" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+<text x="40" y="42" textLength="57.6" lengthAdjust="spacingAndGlyphs"><tspan class="acc">$</tspan> exit</text>
+<text x="40" y="70" class="dim">logout. Connection to tim@nairobi closed. Thanks for reading.</text>
+<rect class="cur" x="106" y="28" width="9" height="18" fill="#00ff41"/>
+</svg>

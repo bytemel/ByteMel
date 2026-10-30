@@ -1,5 +1,7 @@
 // Live uptime board beside `whoami`: pings each shipped site and draws a terminal card.
-// Called from pulse.mjs every 6 hours. No timestamp, so the SVG only changes when a site does.
+// Called from pulse.mjs every 6 hours, once per theme. No timestamp, so the SVG only changes when a site does.
+
+import { THEMES, MONO } from "./themes.mjs";
 
 export const SITES = [
   "afriesg.africa",
@@ -31,7 +33,7 @@ export async function checkSites(sites = SITES) {
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
-export function renderStatusBoard(results) {
+export function renderStatusBoard(results, t = THEMES.dark) {
   const W = 300;
   const top = 58;
   const rowH = 22;
@@ -41,7 +43,7 @@ export function renderStatusBoard(results) {
 
   const rows = results.map((r, i) => {
     const y = top + i * rowH;
-    const color = r.up ? "#00ff41" : "#ff3b3b";
+    const color = r.up ? t.accent : t.down;
     return `
   <circle class="dot ${r.up ? "up" : "down"}" style="animation-delay:${(i * 0.23).toFixed(2)}s" cx="22" cy="${y - 4}" r="4" fill="${color}"/>
   <text x="34" y="${y}" class="host">${esc(r.host)}</text>
@@ -50,21 +52,22 @@ export function renderStatusBoard(results) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${upCount} of ${results.length} sites I built are up">
   <style>
-    text { font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
-    .host { fill: #c9d1d9; }
-    .head { fill: #00ff41; font-weight: 600; }
-    .sub { fill: #8b949e; font-size: 11px; }
+    text { font-family: ${MONO}; font-size: 12px; }
+    .host { fill: ${t.text}; }
+    .head { fill: ${t.accent}; font-weight: 600; }
+    .sub { fill: ${t.muted}; font-size: 11px; }
     .dot.up { animation: beat 2.4s ease-in-out infinite; }
     .dot.down { animation: blink 0.8s steps(2) infinite; }
     .cursor { animation: blink 1s steps(2) infinite; }
     @keyframes beat { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
     @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .dot, .cursor { animation: none; } }
   </style>
-  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="8" fill="#0d1117" stroke="#00ff41" stroke-opacity="0.6"/>
+  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="8" fill="${t.bg}" stroke="${t.border}" stroke-width="1"/>
   <circle cx="16" cy="14" r="4" fill="#ff5f56"/><circle cx="30" cy="14" r="4" fill="#ffbd2e"/><circle cx="44" cy="14" r="4" fill="#27c93f"/>
   <text x="14" y="38" class="head">&gt; ./uptime --built-by-me</text>${rows}
   <text x="14" y="${H - 14}" class="sub">${upCount}/${results.length} up${allUp ? ", still running without me" : ", I am on it"}</text>
-  <rect class="cursor" x="${W - 22}" y="${H - 24}" width="7" height="13" fill="#00ff41"/>
+  <rect class="cursor" x="${W - 22}" y="${H - 24}" width="7" height="13" fill="${t.accent}"/>
 </svg>
 `;
 }
