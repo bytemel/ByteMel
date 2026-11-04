@@ -123,7 +123,7 @@ last public push .......... docent, 2d ago
 100-day streak challenge
 [█░░░░░░░░░░░░░░░░░░░] 3/100
 
-today's side quest: Ship it ugly, polish it after
+today's side quest: Ship something before lunch
 ```
 <!--PULSE:END-->
 
