@@ -123,7 +123,7 @@ last public push .......... docent, 5d ago
 100-day streak challenge
 [█░░░░░░░░░░░░░░░░░░░] 6/100
 
-today's side quest: Build a thing in under an hour, just because
+today's side quest: Fix the bug I have been ignoring
 ```
 <!--PULSE:END-->
 
