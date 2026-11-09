@@ -86,6 +86,7 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 ### `> ./activity`
 
+<!--STREAK:START-->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/streak.svg"/>
@@ -93,6 +94,7 @@ Tools I built for the work I do: running programmes, running communities, and wi
     <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/streak.svg" alt="Contribution streak"/>
   </picture>
 </p>
+<!--STREAK:END-->
 
 <p align="center">
   <a href="https://bytemel.github.io/ByteMel/">

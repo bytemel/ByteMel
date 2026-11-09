@@ -155,9 +155,47 @@ await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
   weeks: weeksForGame.map((days) => days.map((d) => [d.date, d.count, d.weekday])),
 }));
 
-// The streak card under ./activity, drawn here so no outside image service can break it.
+// The streak card under ./activity. Prefer the standard streak-stats card; when that service is down,
+// fall back to our own card so the README never shows a broken image. Checked every run, switches both ways.
 await writeFile(new URL("streak.svg", ASSETS), renderStreakCard(days, cal.totalContributions));
 await writeFile(new URL("streak-light.svg", ASSETS), renderStreakCard(days, cal.totalContributions, THEMES.light));
+
+const STREAK_START = "<!--STREAK:START-->";
+const STREAK_END = "<!--STREAK:END-->";
+const DEMOLAB = "https://streak-stats.demolab.com";
+const DEMOLAB_DARK = `${DEMOLAB}?user=${USER}&background=0D1117&border=30363D&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=E6EDF3&currStreakLabel=00FF41&sideLabels=8B949E&dates=8B949E`;
+const DEMOLAB_LIGHT = `${DEMOLAB}?user=${USER}&background=F6F8FA&border=D0D7DE&ring=1A7F37&fire=1A7F37&currStreakNum=1A7F37&sideNums=1F2328&currStreakLabel=1A7F37&sideLabels=59636E&dates=59636E`;
+const OWN = "https://raw.githubusercontent.com/bytemel/ByteMel/main/assets";
+
+async function demolabUp() {
+  // Two tries. The service answers errors with a 200 SVG too, so check the body for its error text.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(DEMOLAB_DARK, { signal: AbortSignal.timeout(20000) });
+      const body = await res.text();
+      if (res.ok && body.includes("<svg") && !/error|something went wrong|could not|not found/i.test(body)) return true;
+    } catch {}
+  }
+  return false;
+}
+
+const useDemolab = await demolabUp();
+const [dark, light] = useDemolab ? [DEMOLAB_DARK, DEMOLAB_LIGHT] : [`${OWN}/streak.svg`, `${OWN}/streak-light.svg`];
+const streakBlock = [
+  STREAK_START,
+  `<p align="center">`,
+  `  <picture>`,
+  `    <source media="(prefers-color-scheme: dark)" srcset="${dark}"/>`,
+  `    <source media="(prefers-color-scheme: light)" srcset="${light}"/>`,
+  `    <img src="${dark}" alt="Contribution streak"/>`,
+  `  </picture>`,
+  `</p>`,
+  STREAK_END,
+].join("\n");
+const streakPattern = new RegExp(`${STREAK_START}[\\s\\S]*?${STREAK_END}`);
+const readmeNow = await readFile(README, "utf8");
+if (streakPattern.test(readmeNow)) await writeFile(README, readmeNow.replace(streakPattern, streakBlock));
+console.log(`streak card: ${useDemolab ? "streak-stats.demolab.com" : "own fallback"}`);
 
 // The uptime board beside `whoami`.
 const sites = await checkSites();
