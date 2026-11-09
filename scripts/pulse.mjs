@@ -3,6 +3,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { renderSnakeGame } from "./snake-game.mjs";
 import { checkSites, renderStatusBoard } from "./status-board.mjs";
+import { renderStreakCard } from "./streak-card.mjs";
 import { THEMES } from "./themes.mjs";
 
 const USER = process.env.GH_USER || "bytemel";
@@ -153,6 +154,10 @@ await writeFile(new URL("contributions.json", DOCS), JSON.stringify({
   bot: { score: demo.score, outcome: demo.outcome },
   weeks: weeksForGame.map((days) => days.map((d) => [d.date, d.count, d.weekday])),
 }));
+
+// The streak card under ./activity, drawn here so no outside image service can break it.
+await writeFile(new URL("streak.svg", ASSETS), renderStreakCard(days, cal.totalContributions));
+await writeFile(new URL("streak-light.svg", ASSETS), renderStreakCard(days, cal.totalContributions, THEMES.light));
 
 // The uptime board beside `whoami`.
 const sites = await checkSites();

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Current streak 8 days, longest streak 18 days, 1509 contributions in the last year">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; text-anchor: middle; }
+    .num { font-size: 28px; font-weight: 700; fill: #e6edf3; }
+    .cur { font-size: 28px; font-weight: 700; fill: #00ff41; }
+    .label { font-size: 14px; fill: #8b949e; }
+    .curlabel { font-size: 14px; font-weight: 700; fill: #00ff41; }
+    .dates { font-size: 11px; fill: #8b949e; }
+    .ring { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+    @media (prefers-reduced-motion: reduce) { .ring { animation: none; } }
+  </style>
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <line x1="165" y1="28" x2="165" y2="167" stroke="#30363d" stroke-width="1"/>
+  <line x1="330" y1="28" x2="330" y2="167" stroke="#30363d" stroke-width="1"/>
+
+  <text x="82.5" y="80" class="num">1,509</text>
+  <text x="82.5" y="116" class="label">Contributions</text>
+  <text x="82.5" y="142" class="dates">Nov 9, 2025 - Present</text>
+
+  <circle class="ring" cx="247.5" cy="71" r="40" fill="none" stroke="#00ff41" stroke-width="5"/>
+  <circle cx="247.5" cy="31" r="11" fill="#0d1117"/>
+  <path transform="translate(240.5 21)" fill="#00ff41" d="M7 0c1 3.5 5 5.6 5 10.2A5 5 0 0 1 2 10.2C2 7.8 3.4 6.4 4.4 5c.3 1.6 1 2.4 2 2.6C6.2 5.2 6.2 2.6 7 0z"/>
+  <text x="247.5" y="81" class="cur">8</text>
+  <text x="247.5" y="140" class="curlabel">Current Streak</text>
+  <text x="247.5" y="162" class="dates">Nov 1 - Nov 8, 2026</text>
+
+  <text x="412.5" y="80" class="num">18</text>
+  <text x="412.5" y="116" class="label">Longest Streak</text>
+  <text x="412.5" y="142" class="dates">Sep 21 - Oct 8, 2026</text>
+</svg>
