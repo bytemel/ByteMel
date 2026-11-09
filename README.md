@@ -89,9 +89,9 @@ Tools I built for the work I do: running programmes, running communities, and wi
 <!--STREAK:START-->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/streak.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/streak-light.svg"/>
-    <img src="https://raw.githubusercontent.com/bytemel/ByteMel/main/assets/streak.svg" alt="Contribution streak"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=bytemel&background=0D1117&border=30363D&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=E6EDF3&currStreakLabel=00FF41&sideLabels=8B949E&dates=8B949E"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=bytemel&background=F6F8FA&border=D0D7DE&ring=1A7F37&fire=1A7F37&currStreakNum=1A7F37&sideNums=1F2328&currStreakLabel=1A7F37&sideLabels=59636E&dates=59636E"/>
+    <img src="https://streak-stats.demolab.com?user=bytemel&background=0D1117&border=30363D&ring=00FF41&fire=00FF41&currStreakNum=00FF41&sideNums=E6EDF3&currStreakLabel=00FF41&sideLabels=8B949E&dates=8B949E" alt="Contribution streak"/>
   </picture>
 </p>
 <!--STREAK:END-->
@@ -115,8 +115,8 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,511
-this week ................. 134
+contributions, last year .. 1,516
+this week ................. 139
 current streak ............ 9 days 🔥
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
