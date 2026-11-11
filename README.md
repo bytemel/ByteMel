@@ -115,8 +115,8 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,534
-this week ................. 138
+contributions, last year .. 1,552
+this week ................. 156
 current streak ............ 11 days 🔥
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
