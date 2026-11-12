@@ -115,17 +115,17 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,552
-this week ................. 156
-current streak ............ 11 days 🔥
+contributions, last year .. 1,556
+this week ................. 127
+current streak ............ 12 days 🔥
 longest streak ............ 18 days
 best day .................. 157 on 2026-09-27
-last public push .......... docent, 9d ago
+last public push .......... docent, 10d ago
 
 100-day streak challenge
-[██░░░░░░░░░░░░░░░░░░] 11/100
+[██░░░░░░░░░░░░░░░░░░] 12/100
 
-today's side quest: Try a tool I have never used
+today's side quest: Teach someone one thing I learned this week
 ```
 <!--PULSE:END-->
 
