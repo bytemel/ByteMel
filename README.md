@@ -115,15 +115,15 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,710
-this week ................. 113
-current streak ............ 18 days 🔥
-longest streak ............ 18 days
+contributions, last year .. 1,719
+this week ................. 122
+current streak ............ 19 days 🔥
+longest streak ............ 19 days
 best day .................. 157 on 2026-09-27
 last public push .......... docent, 17d ago
 
 100-day streak challenge
-[████░░░░░░░░░░░░░░░░] 18/100
+[████░░░░░░░░░░░░░░░░] 19/100
 
 today's side quest: Delete more code than I write
 ```
