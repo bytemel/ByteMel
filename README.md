@@ -115,17 +115,17 @@ Tools I built for the work I do: running programmes, running communities, and wi
 
 <!--PULSE:START-->
 ```text
-contributions, last year .. 1,755
-this week ................. 72
-current streak ............ 1 day 🌱
+contributions, last year .. 1,797
+this week ................. 109
+current streak ............ 2 days 🌱
 longest streak ............ 21 days
 best day .................. 157 on 2026-09-27
-last public push .......... inside a client repo 🤫
+last public push .......... tafsiri, 9h ago
 
 100-day streak challenge
-[░░░░░░░░░░░░░░░░░░░░] 1/100
+[░░░░░░░░░░░░░░░░░░░░] 2/100
 
-today's side quest: Push to production on a Friday (kidding. mostly)
+today's side quest: Make one page load faster
 ```
 <!--PULSE:END-->
 
